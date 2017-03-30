@@ -1,5 +1,5 @@
 module Blazer
-  class BaseController < ApplicationController
+  class BaseController < ActionController::Base
     # skip filters
     filters = _process_action_callbacks.map(&:filter) - [:activate_authlogic]
     if Rails::VERSION::MAJOR >= 5
